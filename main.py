@@ -35,10 +35,15 @@ def register_page():
         with open('data/test.json') as file:
             listObj = json.load(file)
         
-        if session["user_data"] not in listObj:
-            listObj.append(session["user_data"])
-        else:
-            flash("")
+
+        # If the user is already registered reload the page with a flash
+        for element in listObj:
+            if element["email"] == session["user_data"]["email"]:
+                flash("This email is already registered")
+                return render_template("register.html")
+            
+        # Else, register the user
+        listObj.append(session["user_data"])
         
         with open('data/test.json', 'w') as file:
             file.write(json.dumps(listObj, sort_keys=True, indent=2))
