@@ -151,8 +151,13 @@ def update():
         return redirect(url_for("blog.user", user_name=session["user_data"]["user_name"]))
 
 
-@auth_bp.route('/logout', methods=["POST", "GET", "DELETE"])
+@auth_bp.route('/logout', methods=["POST", "GET"])
 def logout():
+
+    if request.method == "GET":
+        redirect(url_for("blog.index"))
+
+
     auth_bp.permanent_session_lifetime = timedelta(minutes=2)
     session.permanent = True;
 
@@ -160,8 +165,12 @@ def logout():
     return redirect(url_for("blog.index"))
 
 
-@auth_bp.route("/delete_account", methods=["GET", "POST", "DELETE"])
+@auth_bp.route("/delete_account", methods=["GET", "DELETE"])
 def delete_account():
+
+    if request.method == "GET":
+        redirect(url_for("blog.index"))
+
     auth_bp.permanent_session_lifetime = timedelta(minutes=2)
     session.permanent = True;
 
