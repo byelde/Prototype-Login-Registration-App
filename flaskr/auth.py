@@ -69,7 +69,12 @@ def login():
     session.permanent = True;
 
     if request.method == "GET":
-        return render_template("auth/login.html");
+        try:
+            session["user_data"]
+            return redirect(url_for("blog.user"))
+        except:
+            return render_template("auth/login.html");
+        
     
     else:
 
@@ -111,7 +116,12 @@ def update():
     session.permanent = True;
 
     if request.method == "GET":
-        return render_template("blog/update.html")
+        try:
+            session["user_data"]
+            return render_template("blog/update.html")
+        except:
+            return redirect(url_for("blog.index"))
+        
 
     else:
         error = None
