@@ -3,7 +3,7 @@
 # SISTEMA PROTÓTIPO DE LOGIN-REGISTRO USANDO FLASK 
 
 ## Info
-Um sistema simples de login-registro em python usando pacotes Flask e Json
+Um sistema simples de login-registro em python usando os pacotes Flask e Json
 
 ## Como usar
 
@@ -15,7 +15,7 @@ Um sistema simples de login-registro em python usando pacotes Flask e Json
 2. Abra o projeto, vá para o diretório ```/flasktest```
 3. Inicie um ambiente virtual python usando o comando ```$ python3 -m venv .venv```
 4. Inicie o ambiente virtual usando o comando ```$ . .venv/bin/activate```
-5. Instale ```requirements.txt``` no projeto usando ``` $ $ pip install -r requirements.txt```
+5. Instale ```requirements.txt``` no projeto usando ``` $ pip install -r requirements.txt```
 6. Execute o projeto usando o comando ``` $ flask --app flaskr run --debug ```
 
 <br>
@@ -39,6 +39,6 @@ A simple login-registration system in python using Flask and Json packages
 2. Open project, go to directory ```/flasktest```
 3. Start a python virtual environment using the command ```$ python3 -m venv .venv```
 4. Start the virtual environment using the command ```$ . .venv/bin/activate```
-5. Install the ```requirements.txt``` in the project using ``` $ $ pip install -r requirements.txt```
+5. Install the ```requirements.txt``` in the project using ``` $ pip install -r requirements.txt```
 6. Run the project using the comammand ``` $ flask --app flaskr run --debug ```
 
