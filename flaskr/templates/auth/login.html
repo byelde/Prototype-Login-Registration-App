@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+    <p>Login</p>
+
+    {% block flash %}
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for msg in messages %}
+                    <p>{{msg}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    {% endblock %}
+
+    <form action="#" method="post">
+        <p> <input type="text" placeholder="Enter User nem or email" name="user_id"/> </p>
+        <p> <input type="password" placeholder="Enter Password" name="password"/> </p>
+        <p> <input type="submit" value="Submit"/> </p>
+    </form>
+
+    <form action="/" method="post">
+        <input type="submit" value="Return to home">
+    </form> 
+{% endblock %}
