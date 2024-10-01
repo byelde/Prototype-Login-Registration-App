@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+    
+    {% for user in users %}
+        <tr>
+            <th>{{user.getUserName()}}</th>
+            <th>{{user.getEmail()}}</th>
+            <th>{{user.password}}</th>
+            <br>
+        </tr>
+    {% endfor %}
+
+    <form action="#" method="Post">
+        {{ method("PUT")}}
+        <p> <input type="submit" value="Clear DataBase"/> </p>
+    </form>
+
+{% endblock %}

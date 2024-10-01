@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "layout.html" %}
 {% block content %}
     <p>Login</p>
 
@@ -12,13 +12,14 @@
         {% endwith %}
     {% endblock %}
 
-    <form action="#" method="post">
-        <p> <input type="text" placeholder="Enter User nem or email" name="user_id"/> </p>
+    <form action="#" method="Post">
+        {{ method("PUT") }}
+        <p> <input type="email" placeholder="Enter Email" name="email"/> </p>
         <p> <input type="password" placeholder="Enter Password" name="password"/> </p>
         <p> <input type="submit" value="Submit"/> </p>
     </form>
 
-    <form action="/" method="post">
+    <form action="/" method="Get">
         <input type="submit" value="Return to home">
     </form> 
 {% endblock %}

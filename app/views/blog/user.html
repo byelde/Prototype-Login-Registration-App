@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <div name="user_page">
+        
+        <h1>Hello {{user_name}}</h1>
+    
+        <div name="user_options">
+            
+            <form action="/logout" method="POST">
+                {{method("PUT")}}
+                <input type="submit" value="Logout">
+            </form>
+    
+            <form action="/delete" method="Post">
+                {{ method('DELETE')}}
+                <input type="submit" value="Delete Account">
+            </form> 
+    
+            <form action="/update" method="GET">
+                <input type="submit" value="Change Password">
+            </form> 
+    
+        </div>
+
+    </div>
+
+{% endblock %}
