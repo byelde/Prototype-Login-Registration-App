@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+    
+    {% block flash %}
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for msg in messages %}
+                    <p>{{msg}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    {% endblock %}
+
+    <p>Change Password</p>
+    <form action="#" method="Post">
+        {{ method("PUT") }}
+        <p> <input type="password" placeholder="Current Password" name="curr_pwd"></p>
+        <p> <input type="password" placeholder="New Password" name="new_pwd"/> </p>
+        <p> <input type="submit" value="Save"/> </p>
+    </form>
+
+{% endblock %}

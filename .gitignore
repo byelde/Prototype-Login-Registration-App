@@ -1,9 +1,9 @@
-.venv/
+.venv
+.vscode
+instance
+migrations/
 
-*.pyc
-__pycache__/
-
-instance/
+__pycache__
 
 .pytest_cache/
 .coverage
